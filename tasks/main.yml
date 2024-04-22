@@ -1,0 +1,11 @@
+---
+# opensuse_zypper_repos/tasks/main.yml
+
+- name: 'Create zypper repo file(s)'
+  ansible.builtin.template:
+    src: 'repo.j2'
+    dest: '/etc/zypp/repos.d/{{ item.name }}.repo'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  loop: "{{ list_of_zypper_repos }}"

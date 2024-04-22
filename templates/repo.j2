@@ -1,0 +1,25 @@
+[{{ item.name }}]
+{% if item.long_name is defined %}
+name={{ item.long_name }}
+{% endif %}
+enabled={{ item.enabled | default('1') }}
+autorefresh={{ item.autorefresh | default('1') }}
+baseurl={{ item.baseurl }}
+{% if item.type is defined %}
+type={{ item.type }}
+{% endif %}
+{% if item.priority is defined %}
+priority={{ item.priority }}
+{% endif %}
+{% if item.gpgcheck is defined %}
+gpgcheck={{ item.gpgcheck }}
+{% endif %}
+{% if item.gpgkey is defined %}
+gpgkey={{ item.gpgkey }}
+{% endif %}
+{% if item.path is defined %}
+path={{ item.path }}
+{% endif %}
+{% if item.keeppackages is defined %}
+keeppackages={{ item.keeppackages }}
+{% endif %}

@@ -1,0 +1,21 @@
+galaxy_info:
+  role_name: 'opensuse_zypper_repos'
+  namespace: 'johanneskastl'
+  author: 'Johannes Kastl'
+  description: 'Configure (multiple) zypper repository definitions on SUSE/openSUSE'
+
+  license: 'BSD-3-Clause'
+
+  min_ansible_version: '2.12'
+
+  platforms:
+    - name: opensuse
+      versions:
+        - all
+    - name: SLES
+      versions:
+        - all
+
+  galaxy_tags: []
+
+dependencies: []
